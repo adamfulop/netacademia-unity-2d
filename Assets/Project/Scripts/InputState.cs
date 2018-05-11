@@ -4,8 +4,7 @@ public class InputState : MonoBehaviour {
 	public bool IsActionButtonPressed;	// éppen le van-e nyomva bármilyen gomb
 	public bool IsStanding;				// a földön áll-e a játékos
 	public float StandingThreshold;		// az a magasság (Y érték), ami alatt a játékos a "földön áll"
-
-	private Vector2 _absoluteVelocity;	// a játékos sebességének abszolút értéke (X és Y irányban)
+	public Vector2 AbsoluteVelocity;	// a játékos sebességének abszolút értéke (X és Y irányban)
 
 	private Rigidbody2D _rigidbody2D;	// 2D merevtest
 
@@ -19,8 +18,8 @@ public class InputState : MonoBehaviour {
 
 	private void FixedUpdate() {
 		// a sebességvektornak komponenseinek abszolút értékeiből képezzük az abszolút sebességet
-		_absoluteVelocity = new Vector2(Mathf.Abs(_rigidbody2D.velocity.x), Mathf.Abs(_rigidbody2D.velocity.y));
+		AbsoluteVelocity = new Vector2(Mathf.Abs(_rigidbody2D.velocity.x), Mathf.Abs(_rigidbody2D.velocity.y));
 		// a játékos a "földön áll", ha a küszöbértéknél alacsonyabb az Y koordinátája
-		IsStanding = _absoluteVelocity.y < StandingThreshold;
+		IsStanding = AbsoluteVelocity.y < StandingThreshold;
 	}
 }
