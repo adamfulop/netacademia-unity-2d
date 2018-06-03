@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Lean.Pool;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour {
@@ -16,7 +17,7 @@ public class Spawner : MonoBehaviour {
         yield return new WaitForSeconds(Delay);    // várakozás Delay másodpercig
 
         if (Active) {    // ha aktív, létrehozzuk az új objektumot és új várakozási időt állítunk be
-            GameObjectUtil.Instantiate(Prefabs[Random.Range(0, Prefabs.Length)], transform.position);
+            LeanPool.Spawn(Prefabs[Random.Range(0, Prefabs.Length)], transform.position, Quaternion.identity);
             ResetDelay();
         }
 
