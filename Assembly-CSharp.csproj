@@ -54,7 +54,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Project\Scripts\AnimatedTexture.cs" />
+    <Compile Include="Assets\Project\Scripts\ArrowPickup.cs" />
     <Compile Include="Assets\Project\Scripts\DestroyOffscreen.cs" />
+    <Compile Include="Assets\Project\Scripts\Enemy.cs" />
     <Compile Include="Assets\Project\Scripts\GameController.cs" />
     <Compile Include="Assets\Project\Scripts\GameObjectUtil.cs" />
     <Compile Include="Assets\Project\Scripts\InputState.cs" />
@@ -65,8 +67,12 @@
     <Compile Include="Assets\Project\Scripts\Obstacle.cs" />
     <Compile Include="Assets\Project\Scripts\PixelPerfectCamera.cs" />
     <Compile Include="Assets\Project\Scripts\PlayerAnimationController.cs" />
+    <Compile Include="Assets\Project\Scripts\PlayerInventory.cs" />
+    <Compile Include="Assets\Project\Scripts\PlayerShot.cs" />
+    <Compile Include="Assets\Project\Scripts\Projectile.cs" />
     <Compile Include="Assets\Project\Scripts\RecycleGameObject.cs" />
     <Compile Include="Assets\Project\Scripts\ScoreText.cs" />
+    <Compile Include="Assets\Project\Scripts\SpawnedObjectsContainer.cs" />
     <Compile Include="Assets\Project\Scripts\Spawner.cs" />
     <Compile Include="Assets\Project\Scripts\TimeController.cs" />
     <Compile Include="Assets\Third Party\Black Knight\AnimationEvent.cs" />
@@ -85,11 +91,11 @@
     <None Include="Assets\Third Party\LeanPool\Examples\Shaders\Skybox.shader" />
     <None Include="Assets\Third Party\Sprite Pack\Tap and Fly\Readme.txt" />
     <None Include="Assets\Third Party\Black Knight\ReadMe.txt" />
-    <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/Dev/Unity/NetAcademia - EndlessArcher/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Dev/Unity/NetAcademia - EndlessArcher/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageManagerUI.Editor">
+      <HintPath>D:/Dev/Unity/NetAcademia - EndlessArcher/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

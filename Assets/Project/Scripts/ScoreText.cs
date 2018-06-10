@@ -11,6 +11,10 @@ public class ScoreText : MonoBehaviour {
 	public float ScoreSeconds {
 		set { _text.text = string.Format("{0}: {1}", Prefix, FormatTime(value)); }
 	}
+	
+	public float ScoreValue {
+		set { _text.text = string.Format("{0}: {1}", Prefix, value); }
+	}
 
 	private void Awake() {
 		_text = GetComponent<Text>();

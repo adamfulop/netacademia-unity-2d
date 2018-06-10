@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour {
     public float Delay;             // idő másodpercekben a következő létrehozásig
     public bool Active = true;      // aktív-e az objektum
     public Vector2 DelayRange;      // minimum és maximum időintervallum a következő lehetséges létrehozásig
+    public SpawnedObjectsContainer SpawnedObjectsContainer;
 
     private void Start() {
         ResetDelay();
@@ -17,7 +18,7 @@ public class Spawner : MonoBehaviour {
         yield return new WaitForSeconds(Delay);    // várakozás Delay másodpercig
 
         if (Active) {    // ha aktív, létrehozzuk az új objektumot és új várakozási időt állítunk be
-            LeanPool.Spawn(Prefabs[Random.Range(0, Prefabs.Length)], transform.position, Quaternion.identity);
+            LeanPool.Spawn(Prefabs[Random.Range(0, Prefabs.Length)], transform.position, Quaternion.identity, SpawnedObjectsContainer.transform);
             ResetDelay();
         }
 
@@ -28,4 +29,4 @@ public class Spawner : MonoBehaviour {
     private void ResetDelay() {
         Delay = Random.Range(DelayRange.x, DelayRange.y);
     }
-}
+}    

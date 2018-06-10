@@ -41,7 +41,7 @@ public class DestroyOffscreen : MonoBehaviour {
         if (_isOffScreen) OnOutOfBounds();
     }
 
-    private void OnOutOfBounds() {
+    public void OnOutOfBounds() {
         _isOffScreen = false;
         LeanPool.Despawn(gameObject);    // "megsemmisítjük az objektumot" (= poolba visszatesszük)
         
