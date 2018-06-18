@@ -16,13 +16,13 @@ public class UnitControl : MonoBehaviour {
 	void Update(){
 
 		int horizontal = 0;  
-		int vertical = 0;		
+		//int vertical = 0;		
 
 		horizontal = (int)(Input.GetAxisRaw ("Horizontal"));
-		vertical = (int)(Input.GetAxisRaw ("Vertical"));
+		//vertical = (int)(Input.GetAxisRaw ("Vertical"));
 
 		if (horizontal != 0) {
-			vertical = 0;
+			//vertical = 0;
 		}
 
 		Vector3 localScale = this.transform.localScale;

@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour {
     [SerializeField] private ScoreText _bestScoreText;
 
     private GameObject _player;
+    private HighScoresController _highScoresController;
     private PixelPerfectCamera _pixelPerfectCamera;
     private Spawner _spawner;
     private TimeController _timeController;
@@ -23,6 +24,7 @@ public class GameController : MonoBehaviour {
     private float _bestTime;
 
     private void Awake() {
+        _highScoresController = FindObjectOfType<HighScoresController>();
         _pixelPerfectCamera = FindObjectOfType<PixelPerfectCamera>();
         _spawner = FindObjectOfType<Spawner>();
         _timeController = GetComponent<TimeController>();
@@ -35,8 +37,11 @@ public class GameController : MonoBehaviour {
         Time.timeScale = 0;
         
         // ha van mentett pontszám, betöltjük
-        _bestTime = PlayerPrefs.GetFloat("BestTime");
-        _bestScoreText.ScoreSeconds = _bestTime;
+//        _bestTime = PlayerPrefs.GetFloat("BestTime");
+        if (_highScoresController.HighScores.Count > 0) {
+            _bestTime = _highScoresController.HighScores[0].Score;
+        }
+        _bestScoreText.ScoreSeconds = _bestTime; 
     }
 
     private void Update() {
@@ -91,7 +96,8 @@ public class GameController : MonoBehaviour {
         // ha jobb a pontszám, mint az eddigi legjobb, akkor elmentjük
         if (_elapsedTime > _bestTime) {
             _bestTime = _elapsedTime;
-            PlayerPrefs.SetFloat("BestTime", _bestTime);
+//            PlayerPrefs.SetFloat("BestTime", _bestTime);
+            _highScoresController.AddHighScore(_bestTime);
             _bestScoreText.ScoreSeconds = _bestTime;
         }
     }
