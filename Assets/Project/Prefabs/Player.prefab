@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 114285157359735482}
   - component: {fileID: 114486798193798268}
   - component: {fileID: 114481933372129810}
+  - component: {fileID: 114938416252039242}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -147,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d99a333c6f430a84d8c449c841855fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _arrowCount: 0
 --- !u!114 &114486798193798268
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -169,6 +171,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e7b56417f39bab4fb20dc3459823c74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114938416252039242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1950293717678842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a16c730680be1242bd848897c7f3896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _arrowPrefab: {fileID: 1357482622897300, guid: 40e0b883d7778ac449208d86dd64c56b,
+    type: 2}
 --- !u!114 &114985695155163696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -181,6 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsActionButtonPressed: 0
+  IsSpacePressed: 0
   IsStanding: 0
   StandingThreshold: 1
   AbsoluteVelocity: {x: 0, y: 0}

@@ -2,6 +2,7 @@
 
 public class InputState : MonoBehaviour {
 	public bool IsActionButtonPressed;	// éppen le van-e nyomva bármilyen gomb
+	public bool IsSpacePressed;
 	public bool IsStanding;				// a földön áll-e a játékos
 	public float StandingThreshold;		// az a magasság (Y érték), ami alatt a játékos a "földön áll"
 	public Vector2 AbsoluteVelocity;	// a játékos sebességének abszolút értéke (X és Y irányban)
@@ -13,7 +14,13 @@ public class InputState : MonoBehaviour {
 	}
 
 	private void Update() {
-		IsActionButtonPressed = Input.anyKeyDown;
+		if (Input.GetKeyDown(KeyCode.Space)) {	// lövés
+			IsSpacePressed = true;
+			IsActionButtonPressed = false;
+		} else {	
+			IsActionButtonPressed = Input.anyKeyDown;	// ugrás
+			IsSpacePressed = false;
+		}
 	}
 
 	private void FixedUpdate() {

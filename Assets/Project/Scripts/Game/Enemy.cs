@@ -32,13 +32,20 @@ public class Enemy : MonoBehaviour {
         }
     }
 
+    private void OnDisable() {
+        // lövés metódus időzítésének megszakítása megsemmisítéskor
+        if (IsInvoking("TryShoot")) {
+            CancelInvoke("TryShoot");
+        }
+    }
+
     private void TryShoot() {
         if (_player != null) {    // csak akkor lövünk, ha van játékos
             _canShoot = true;
             
             // az összes akadályra megnézzük, nincs-e a játékos és ellenség között
             foreach (var spawnedObject in _spawnedObjectsContainer.SpawnedObjects) {
-                if (spawnedObject == transform) continue;    // az ellenséget önmagára nem ellenőrizzük
+                if (spawnedObject == transform || spawnedObject.parent == transform) continue;    // az ellenséget önmagára nem ellenőrizzük
                 
                 if (_player.transform.position.x < transform.position.x) { // ha a játékos balra van az ellenségtől
                     _canShoot = !(spawnedObject.position.x > _player.transform.position.x &&

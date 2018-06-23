@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\Project\Scripts\Common\ButtonBehaviour.cs" />
     <Compile Include="Assets\Project\Scripts\Game\AnimatedTexture.cs" />
+    <Compile Include="Assets\Project\Scripts\Game\Arrow.cs" />
     <Compile Include="Assets\Project\Scripts\Game\ArrowPickup.cs" />
     <Compile Include="Assets\Project\Scripts\Game\DestroyOffscreen.cs" />
     <Compile Include="Assets\Project\Scripts\Game\Enemy.cs" />
@@ -66,9 +67,12 @@
     <Compile Include="Assets\Project\Scripts\Game\ObjectPool.cs" />
     <Compile Include="Assets\Project\Scripts\Game\ObjectVelocity.cs" />
     <Compile Include="Assets\Project\Scripts\Game\Obstacle.cs" />
+    <Compile Include="Assets\Project\Scripts\Game\Pendulum.cs" />
+    <Compile Include="Assets\Project\Scripts\Game\PendulumEnemy.cs" />
     <Compile Include="Assets\Project\Scripts\Game\PixelPerfectCamera.cs" />
     <Compile Include="Assets\Project\Scripts\Game\PlayerAnimationController.cs" />
     <Compile Include="Assets\Project\Scripts\Game\PlayerInventory.cs" />
+    <Compile Include="Assets\Project\Scripts\Game\PlayerShoot.cs" />
     <Compile Include="Assets\Project\Scripts\Game\PlayerShot.cs" />
     <Compile Include="Assets\Project\Scripts\Game\Projectile.cs" />
     <Compile Include="Assets\Project\Scripts\Game\RecycleGameObject.cs" />
@@ -83,6 +87,20 @@
     <Compile Include="Assets\Project\Scripts\MainMenu\HighScoresButton.cs" />
     <Compile Include="Assets\Project\Scripts\MainMenu\MainMenuController.cs" />
     <Compile Include="Assets\Project\Scripts\MainMenu\StartGameButton.cs" />
+    <Compile Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Brick\Scripts\Ball.cs" />
+    <Compile Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Brick\Scripts\Brick.cs" />
+    <Compile Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Brick\Scripts\GameEnd.cs" />
+    <Compile Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Brushes\Tint Brush Smooth\Scripts\TintTextureGenerator.cs" />
+    <Compile Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Destructible\Scripts\Destructible.cs" />
+    <Compile Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Destructible\Scripts\Explosion.cs" />
+    <Compile Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Destructible\Scripts\MouseClickBomb.cs" />
+    <Compile Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\GridInformation\Scripts\GridInformation.cs" />
+    <Compile Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Rule Tiles\Scripts\RuleTile.cs" />
+    <Compile Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Tiles\Animated Tile\Scripts\AnimatedTile.cs" />
+    <Compile Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Tiles\Pipeline Tile\Scripts\PipelineTile.cs" />
+    <Compile Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Tiles\Random Tile\Scripts\RandomTile.cs" />
+    <Compile Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Tiles\Terrain Tile\Scripts\TerrainTile.cs" />
+    <Compile Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Tiles\Weighted Random Tile\Scripts\WeightedRandomTile.cs" />
     <Compile Include="Assets\Third Party\Black Knight\AnimationEvent.cs" />
     <Compile Include="Assets\Third Party\Black Knight\demo\UnitControl.cs" />
     <Compile Include="Assets\Third Party\LeanPool\Examples\Scripts\LeanDelayedPooling.cs" />
@@ -95,9 +113,12 @@
     <Compile Include="Assets\Third Party\LeanPool\Scripts\LeanPool.cs" />
     <Compile Include="Assets\Third Party\LeanPool\Scripts\LeanPoolable.cs" />
     <Compile Include="Assets\Third Party\SpritesArchers\Scripts\Change_Sprite.cs" />
+    <None Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Brushes\Tint Brush Smooth\Shaders\TintedTilemap.shader" />
     <None Include="Assets\Third Party\LeanPool\Examples\Fonts\OFL.txt" />
     <None Include="Assets\Third Party\LeanPool\Examples\Shaders\Skybox.shader" />
+    <None Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Normal Mapping\Material\Shader\NormalMappedTile.shader" />
     <None Include="Assets\Third Party\Sprite Pack\Tap and Fly\Readme.txt" />
+    <None Include="Assets\Third Party\2d-techdemos\ProjectSettings\ProjectVersion.txt" />
     <None Include="Assets\Third Party\JsonDotNet\link.xml" />
     <None Include="Assets\Third Party\Black Knight\ReadMe.txt" />
     <Reference Include="UnityEditor.StandardEvents">

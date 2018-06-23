@@ -53,6 +53,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Brushes\Coordinate Brush\Scripts\Editor\CoordinateBrush.cs" />
+    <Compile Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Brushes\GameObject Brush\Scripts\Editor\GameObjectBrush.cs" />
+    <Compile Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Brushes\Line Brush\Scripts\Editor\LineBrush.cs" />
+    <Compile Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Brushes\Prefab Brush\Scripts\Editor\PrefabBrush.cs" />
+    <Compile Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Brushes\Random Brush\Scripts\Editor\RandomBrush.cs" />
+    <Compile Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Brushes\Tint Brush Smooth\Scripts\Editor\TintBrushSmooth.cs" />
+    <Compile Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Brushes\Tint Brush\Scripts\Editor\TintBrush.cs" />
+    <Compile Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Destructible\Scripts\Editor\DestructibleEditor.cs" />
+    <Compile Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Editor\PreviewUtil.cs" />
+    <Compile Include="Assets\Third Party\2d-techdemos\Assets\Tilemap\Rule Tiles\Scripts\Editor\RuleTileEditor.cs" />
     <Compile Include="Assets\Third Party\LeanPool\Editor\LeanGameObjectPool_Editor.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Dev/Unity/NetAcademia - EndlessArcher/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
